@@ -7,10 +7,10 @@ export async function HomePage(currency = 'usd'){
 
   return `
     ${Header()}
-    
+
     <main class="container">
       ${Topcryptos.map((crypto)=>{
         return cryptoCard(crypto, currency);}).join("")}
     </main>
-  `
+  `;
 }
