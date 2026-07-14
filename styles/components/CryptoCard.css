@@ -1,0 +1,54 @@
+.crypto-card {
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr 0.5fr 0.3fr;
+  gap: 1rem;
+  padding:0.5rem 1rem 0.5rem 1rem;
+  align-items: center;
+
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px var(--shadow);
+
+  text-decoration: none;
+  color:var(--text-primary);
+
+}
+
+
+.crypto-card-info{
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+}
+
+.crypto-card-symbol{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.crypto-card-title,
+.crypto-card-symbol p {
+  color:grey;
+  font-size: 0.8rem;
+}
+
+
+.crypto-card img{
+  width:2.5rem;
+  height:2.5rem;
+  flex-shrink: 0;
+}
+
+.positive{
+  color: var(--success);
+}
+
+.negative{
+  color: var(--danger);
+}
+
+.neutral{
+  color: grey;
+}
