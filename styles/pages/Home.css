@@ -1,0 +1,25 @@
+.dashboard{
+  padding:1rem;
+  width: 80%;
+  margin: 2rem auto;
+  background:rgba(20,20,20,.45);
+  border:1px solid rgba(255,215,0,.12);
+  border-radius:18px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+  width: 80%;
+  margin: 0 auto;
+  padding-top:1rem;
+  padding-left:1rem;
+}
+
+.container h2{
+  display:flex;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+

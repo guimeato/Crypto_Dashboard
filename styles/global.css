@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box ;
+}
+
+:root {
+  --primary: #D4B996;
+  --secondary: #2C2219;
+
+  --text-primary: #F5EFEB;
+  --text-secondary:#E7D9B7;
+
+  --success: #66BB6A;
+  --warning: #F4A261;
+  --danger: #E57373;
+
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+body{
+  background-color: #211C17;
+}
+
+main {
+  
+}

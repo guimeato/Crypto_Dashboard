@@ -1,16 +1,24 @@
-import { getTopCrypto } from "../services/api.js";
+import { getCrypto, getTopCrypto } from "../services/api.js";
 import { cryptoCard } from "../components/CryptoCard.js";
 import { Header } from "../components/Header.js";
+import { FavoriteCard } from "../components/FavoriteCard.js";
 
 export async function HomePage(currency = 'usd'){
   const Topcryptos = await getTopCrypto(currency);
 
+  const bit = await getCrypto('bitcoin');
+
   return `
     ${Header()}
 
-    <main class="container">
-      ${Topcryptos.map((crypto)=>{
-        return cryptoCard(crypto, currency);}).join("")}
+    <main>
+      <div class="dashboard">
+        <section class="container">
+          <h2>TOP 10 Cryptomoedas</h2>
+          ${Topcryptos.map((crypto)=>{
+          return cryptoCard(crypto, currency);}).join("")}
+        </section>
+      </div> 
     </main>
   `;
 }

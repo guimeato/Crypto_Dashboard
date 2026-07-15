@@ -1,16 +1,17 @@
 .crypto-card {
   display: grid;
-  grid-template-columns: 0.2fr 0.8fr 0.5fr 0.3fr;
+  grid-template-columns: 0.2fr 0.6fr 0.3fr 0.15fr;
   gap: 1rem;
   padding:0.5rem 1rem 0.5rem 1rem;
   align-items: center;
-
+  
   width: 100%;
   border-radius: 1rem;
   box-shadow: 0 6px 20px var(--shadow);
 
   text-decoration: none;
   color:var(--text-primary);
+  margin: 0 auto;
 
 }
 
