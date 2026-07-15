@@ -7,6 +7,11 @@ export async function router(){
 
   const hash = window.location.hash;
 
+  if(!window.location.hash){
+    window.location.hash = "#/home";
+    return;
+  }
+
   if(hash.startsWith("#/crypto/")){
     const id = hash.split("/")[2];
 
@@ -14,5 +19,9 @@ export async function router(){
 
     return;
   }
-  app.innerHTML = await HomePage();
+  if(hash.startsWith("#/home")){
+    app.innerHTML = await HomePage();
+
+    return;
+  }
 }
