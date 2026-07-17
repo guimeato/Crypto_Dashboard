@@ -1,6 +1,6 @@
 .crypto-card {
   display: grid;
-  grid-template-columns: 0.2fr 0.6fr 0.3fr 0.15fr;
+  grid-template-columns: 0.15fr 0.6fr 0.3fr 0.15fr 0.05fr;
   gap: 1rem;
   padding:0.5rem 1rem 0.5rem 1rem;
   align-items: center;
@@ -53,3 +53,21 @@
 .neutral{
   color: grey;
 }
+
+.favorite-star{
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  color: #777;
+  font-size: 1.3rem;
+
+  transition: color .25s ease,
+              transform .2s ease;
+}
+
+.favorite-star:hover{
+  color: #FFD700;
+  transform: scale(1.15);
+}
+

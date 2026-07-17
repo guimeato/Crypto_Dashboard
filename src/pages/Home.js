@@ -6,8 +6,6 @@ import { FavoriteCard } from "../components/FavoriteCard.js";
 export async function HomePage(currency = 'usd'){
   const Topcryptos = await getTopCrypto(currency);
 
-  const bit = await getCrypto('bitcoin');
-
   return `
     ${Header()}
 

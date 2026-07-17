@@ -1,3 +1,4 @@
+import { isFavorite } from "../utils/favoriteUtils.js";
 import { formatCurrency } from "../utils/formatCurrency.js";
 
 export function cryptoCard(crypto, currency = 'usd'){
@@ -7,6 +8,7 @@ export function cryptoCard(crypto, currency = 'usd'){
   
   const icon = change > 0 ? "▲" : change < 0  ? "▼" : "•";
   
+  const favorite = isFavorite(crypto.id) ? '⭐ ': '☆';
 
   return (
     `
@@ -27,9 +29,12 @@ export function cryptoCard(crypto, currency = 'usd'){
           <p class="current-price">${formatCurrency(crypto.current_price, currency)}</p>
           
           <p class="${changeClass}">${icon} ${crypto.price_change_percentage_24h.toFixed(2)}%</p>
+
+          <span class="favorite-star" data-id="${crypto.id}">${favorite}</span>
            
         </a>
       </article>
+      
     `
   );
 }
