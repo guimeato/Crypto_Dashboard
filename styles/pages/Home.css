@@ -1,5 +1,5 @@
 .dashboard{
-  padding:1rem;
+  padding:2rem;
   width: 80%;
   margin: 2rem auto;
   background:rgba(20,20,20,.45);
@@ -21,5 +21,6 @@
   display:flex;
   justify-content: center;
   color: var(--text-secondary);
+  margin-bottom: 1rem;
 }
 

@@ -1,4 +1,5 @@
 import { API_KEY } from '../config.js'
+import { getFavorites } from '../utils/favoriteUtils.js'
 
 const BASE_URL = "https://api.coingecko.com/api/v3";
 
@@ -30,3 +31,24 @@ export async function getCrypto(id) {
   
 }
 
+export async function getFavoriteCrypto(currency = 'usd'){
+  try{
+    const favorites = getFavorites();
+
+    if(favorites.length === 0){
+      return [];
+    }
+
+    const favoritesString = favorites.join(",");
+    
+    const response = await fetch(`${BASE_URL}/coins/markets?vs_currency=${currency}&ids=${favoritesString}`);
+    
+    const data = await response.json();
+    
+    return data;
+  }
+  catch(error){
+    console.log('Erro ao carregar as cryptomoedas favoritas');
+  }
+  
+}
