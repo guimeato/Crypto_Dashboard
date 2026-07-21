@@ -30,7 +30,8 @@ export async function router(){
   }
   else if(hash.startsWith("#/favoritos")){
     app.innerHTML = await FavoritePage();
-
+    addFavoriteEvents(render);
+    
     return;
   }
 }

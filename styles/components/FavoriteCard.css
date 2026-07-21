@@ -1,0 +1,71 @@
+
+
+.favorite-card-container{
+  display:grid;
+  grid-template-columns: 0.6fr 1fr 0.8fr 0.1fr;
+  max-width: 100%;
+  width:300px;
+
+  text-decoration: none;
+  color: white;
+
+  box-shadow: 5px 5px 10px var(--shadow);
+  border-radius: 1rem;
+  padding:1rem;
+
+
+}
+
+.crypto-favorite-card-title,
+.crypto-favorite-card-symbol p {
+  color:grey;
+  font-size: 0.8rem;
+}
+
+.favorite-card-value p,
+.crypto-favorite-card-symbol strong{
+  font-size: 0.9rem;
+}
+
+
+.favorite-card-container img{
+  width:2.5rem;
+  height:2.5rem;
+  flex-shrink: 0;
+}
+
+.favorite-star{
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  color: #777;
+  font-size: 1.3rem;
+
+  transition: color .25s ease,
+              transform .2s ease;
+}
+
+.favorite-star:hover{
+  color: #FFD700;
+  transform: scale(1.15);
+}
+
+.crypto-favorite-card-info{
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+}
+
+.crypto-favorite-card-symbol{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.favorite-card-value{
+  display:flex;
+  flex-direction: column;
+  gap:0.4rem;
+}
