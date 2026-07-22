@@ -41,7 +41,7 @@ export async function getFavoriteCrypto(currency = 'usd'){
 
     const favoritesString = favorites.join(",");
     
-    const response = await fetch(`${BASE_URL}/coins/markets?vs_currency=${currency}&ids=${favoritesString}`);
+    const response = await fetch(`${BASE_URL}/coins/markets?vs_currency=${currency}&ids=${favoritesString}&x_cg_demo_api_key=${API_KEY}`);
     
     const data = await response.json();
     
@@ -51,4 +51,13 @@ export async function getFavoriteCrypto(currency = 'usd'){
     console.log('Erro ao carregar as cryptomoedas favoritas');
   }
   
+}
+
+export async function searchCrypto(query){
+
+  const response = await fetch(`${BASE_URL}/search?query=${query}&x_cg_demo_api_key=${API_KEY}`);
+
+  const data = await response.json();
+
+  return data.coins;
 }
