@@ -8,6 +8,14 @@ export async function DetailsPage(id, currency = 'usd'){
   return `
     ${Header()}
 
-    ${cryptoDetails(crypto, currency)}
+    <main>
+      <div class="details-dashboard">
+        <section ="details-container">
+          ${cryptoDetails(crypto, currency)}
+        </section>
+      </div>
+    </main>
+
+   
   `
 }

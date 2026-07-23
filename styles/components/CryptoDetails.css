@@ -1,0 +1,88 @@
+.crypto-details{
+  display: flex;
+  flex-direction: column;
+  color:white;
+
+  gap: 7rem;
+}
+
+.crypto-details span{
+  color:grey;
+}
+
+.crypto-details img{
+  width:5.5rem;
+  height:5.5rem;
+  flex-shrink: 0;
+}
+
+.crypto-info{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap:6rem;
+}
+
+.crypto-principal-info{
+  display:flex;
+  flex-direction:row;
+  align-items: baseline;
+  justify-content: center;
+  gap:2rem;
+}
+
+.crypto-symbol{
+  font-size:1rem;
+  color:gray;
+}
+
+.crypto-ad-info{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(250px,320px));
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color:var(--text-secondary);
+  gap:1rem;
+}
+
+.details-card{
+  box-shadow: 1px 2px 5px var(--shadow);
+  height:3rem;
+  font-size:1.1rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-content:center;
+}
+
+
+#back-btn{
+  width: 30%;
+  min-height:2.7rem;
+  border: none;
+  border-radius: 2rem;
+
+  box-shadow: 1px 2px 5px var(--shadow);
+  color:black;
+  background-color: var(--warning);
+
+
+  align-self: center;
+
+  font-size:1.2rem;
+}
+
+@media (max-width:960px) {
+    .crypto-info{
+      gap:2rem;
+    }
+}
+
+@media (max-width:600px) {
+  .crypto-ad-info{
+    grid-template-columns:repeat(1,minmax(250px,320px));
+  }
+}
